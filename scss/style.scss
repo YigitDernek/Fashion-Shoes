@@ -3,26 +3,12 @@
 
 body {
    margin: 1.5em;
+   padding-top: 15px;
 }
-header {
-   display: flex;
-   justify-content: flex-start;
-}
-.logo {
-   display: inline-block;
-   justify-content: left;
-   max-width: 150px;
-   height: auto;
-}
-.navbar{
+.custom-nav {
    background-color: transparent !important;
-   box-shadow: none;
+   border: none;
 }
-.navbar-nav a{
-   text-transform: uppercase;
-   font-weight: 900;
-}
-
 a {
    text-decoration: none;
 }
