@@ -11967,6 +11967,7 @@ textarea.form-control-lg {
   }
 }
 body {
+  background-color: antiquewhite;
   margin: 1.5em;
   padding-top: 15px;
 }
@@ -11980,15 +11981,54 @@ a {
   text-decoration: none;
 }
 
-.main-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url("../images/Shoes5.jpg");
-  background-size: cover;
-  background-position-x: 10%;
-  background-position-y: 25%;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
+.custom-btn {
+  border-radius: 20px;
+}
+
+.custom-inp {
+  border-radius: 20px;
+}
+
+.custom-home {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #2168BA;
+}
+
+.custom-home:hover {
+  color: white !important;
+  background-color: #2168BA;
+}
+
+.custom-lnk {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #2168BA;
+}
+
+.custom-lnk:hover {
+  color: white !important;
+  background-color: #2168BA;
+}
+
+.custom-drpd {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #2168BA;
+}
+
+.custom-drpd:hover {
+  color: white !important;
+  background-color: #2168BA;
+}
+
+.custom-dsbl {
+  border-radius: 20px;
+  border-style: solid;
+  border-color: #2168BA;
+}
+
+.custom-dsbl:hover {
+  color: white !important;
+  background-color: #2168BA;
 }/*# sourceMappingURL=style.css.map */
