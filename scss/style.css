@@ -11966,69 +11966,152 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: antiquewhite;
-  margin: 1.5em;
-  padding-top: 15px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .custom-nav {
   background-color: transparent !important;
   border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1030;
+}
+.custom-nav .navbar-brand img {
+  max-width: 100px; /* Logonun maksimum genişliği */
+  height: auto;
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    max-width: 80px;
+  }
+}
+.image-container {
+  background-image: url(..//images/main-img.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: 900px;
+  position: relative;
+}
+
+.text-overlay {
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 65px;
+}
+.text-overlay h1, .text-overlay .h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.text-overlay p {
+  margin-bottom: 2rem;
+}
+.text-overlay a {
+  display: inline-block;
+  border-radius: 20px;
+  box-shadow: black;
+  transition: background-color 0.3s;
 }
 
 a {
   text-decoration: none;
 }
 
-.custom-btn {
-  border-radius: 20px;
-}
-
+.custom-btn,
 .custom-inp {
   border-radius: 20px;
 }
-
-.custom-home {
-  border-radius: 20px;
-  border-style: solid;
-  border-color: #2168BA;
-}
-
-.custom-home:hover {
-  color: white !important;
+.custom-btn .custom-btn:hover,
+.custom-inp .custom-btn:hover {
   background-color: #2168BA;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.custom-btn .custom-inp:focus,
+.custom-inp .custom-inp:focus {
+  outline: none;
+  box-shadow: 0 0 5px #2168BA;
 }
 
-.custom-lnk {
-  border-radius: 20px;
-  border-style: solid;
-  border-color: #2168BA;
-}
-
-.custom-lnk:hover {
-  color: white !important;
-  background-color: #2168BA;
-}
-
-.custom-drpd {
-  border-radius: 20px;
-  border-style: solid;
-  border-color: #2168BA;
-}
-
-.custom-drpd:hover {
-  color: white !important;
-  background-color: #2168BA;
-}
-
+.custom-home,
+.custom-lnk,
+.custom-drpd,
 .custom-dsbl {
   border-radius: 20px;
   border-style: solid;
   border-color: #2168BA;
 }
-
+.custom-home:hover,
+.custom-lnk:hover,
+.custom-drpd:hover,
 .custom-dsbl:hover {
-  color: white !important;
+  color: #fff !important;
   background-color: #2168BA;
+}
+
+.card-group {
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex; /* Kartları yan yana hizala */
+  flex-wrap: wrap; /* Alan daraldığında kartların alt satıra geçmesini sağla */
+  gap: 20px; /* Kartlar arasında boşluk bırak */
+  /* Mobil cihazlar için: */
+}
+.card-group .card {
+  flex: 1 1 calc(33.333% - 20px); /* Masaüstünde 3 sütun olacak şekilde genişlik ayarla */
+  max-width: calc(33.333% - 20px); /* Aynı genişlik */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+  overflow: hidden; /* Taşmaları engelle */
+  transition: transform 0.5s ease; /* Hover animasyonu */
+}
+.card-group .card:hover {
+  transform: scale(1.03); /* Hover ile büyütme efekti */
+}
+.card-group .card img {
+  width: 100%; /* Görsel genişliğini kartla eşit yap */
+  height: 300px; /* Sabit bir yükseklik belirle */
+  -o-object-fit: cover;
+     object-fit: cover; /* Görselleri kapsayıcıya sığdır ve taşan yerleri kes */
+}
+@media (max-width: 768px) {
+  .card-group .card {
+    flex: 1 1 100%; /* Mobilde kart genişliği %100 olur, alt alta dizilir */
+    max-width: 100%; /* Aynı genişlikte tut */
+  }
+}
+
+.footer-content {
+  margin-top: 50px;
+  display: grid;
+  justify-items: center;
+}
+.footer-content .btn {
+  border-radius: 20px;
+  margin-left: 5px;
+}
+.footer-content form {
+  display: flex;
+}
+
+.info {
+  display: flex;
+  justify-content: flex-end;
 }/*# sourceMappingURL=style.css.map */
