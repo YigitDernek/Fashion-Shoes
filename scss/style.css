@@ -12037,11 +12037,12 @@ a {
 .custom-btn,
 .custom-inp {
   border-radius: 20px;
+  color: #fff;
 }
 .custom-btn .custom-btn:hover,
 .custom-inp .custom-btn:hover {
-  background-color: #2168BA;
-  color: #fff;
+  background-color: #fff;
+  color: #2168BA;
   transition: all 0.3s ease-in-out;
 }
 .custom-btn .custom-inp:focus,
@@ -12054,6 +12055,7 @@ a {
 .custom-lnk,
 .custom-drpd,
 .custom-dsbl {
+  font-weight: bold;
   border-radius: 20px;
   border-style: solid;
   border-color: #2168BA;
@@ -12062,8 +12064,8 @@ a {
 .custom-lnk:hover,
 .custom-drpd:hover,
 .custom-dsbl:hover {
-  color: #fff !important;
-  background-color: #2168BA;
+  color: #2168BA !important;
+  background-color: #fff;
 }
 
 .card-group {
