@@ -11,7 +11,6 @@ body {
    font-size: 16px;
    line-height: 1.6;
 }
-
 .custom-nav {
    background-color: transparent !important;
    border: none;
@@ -19,9 +18,9 @@ body {
    top: 0;
    left: 0;
    width: 100%;
-   z-index: 1030;
+   z-index: 1000;
 .navbar-brand img{
-      max-width: 100px; /* Logonun maksimum genişliği */
+      max-width: 100px; 
       height: auto;
    }
 }
@@ -30,7 +29,6 @@ body {
        max-width: 80px;
    }
 }
-
 .image-container{
    background-image: url(..//images/main-img.webp);
    background-size: cover;
@@ -41,26 +39,54 @@ body {
    height: 900px;
    position: relative;
 }
-.text-overlay{
+.text-overlay {
    color: #fff;
    position: absolute;
-   top: 45%;
-   left: 65px;
+   top: 50%; 
+   left: 50px;
+   transform: translateY(-50%); 
+   text-align: left;
+ 
    h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
+     font-size: clamp(2rem, 5vw, 3rem); 
    }
+ 
    p {
-      margin-bottom: 2rem;
+     font-size: 1rem;
+     margin-bottom: 1rem;
    }
+ 
    a {
-      display: inline-block;
-      border-radius: 20px;
-      box-shadow: black;
-      transition: background-color 0.3s;
+     padding: 10px 20px;
+     background-color: #2168ba;
+     color: #fff;
+     text-decoration: none;
+     border-radius: 20px;
+     font-size: 1rem;
    }
-}
+ 
+   @media (max-width: 768px) {
+     /* Mobil ekranlar için */
+     top: 40%; 
+     left: 20px; 
+     transform: none; 
+     text-align: left; 
+ 
+     h1 {
+       font-size: 1.5rem; 
+     }
+ 
+     p {
+       font-size: 0.9rem;
+     }
+ 
+     a {
+       font-size: 0.9rem; 
+       padding: 8px 16px; 
+     }
+   }
+ }
+
 a {
    text-decoration: none;
 }
@@ -80,49 +106,46 @@ a {
 }
 .custom-home,
 .custom-lnk,
-.custom-drpd,
-.custom-dsbl {
+.custom-dsbl,
+.custom-drpdwn {
    font-weight: bold;
    border-radius: 20px;
-   border-style: solid;
-   border-color: #2168BA;
-
    &:hover {
-      color: #2168BA !important;
-      background-color: #fff;
+      color: #fff !important;
+      background-color: #2168BA;
    }
 }
 .card-group {
    margin-top: 100px;
    margin-left: 50px;
    margin-right: 50px;
-   display: flex; /* Kartları yan yana hizala */
-   flex-wrap: wrap; /* Alan daraldığında kartların alt satıra geçmesini sağla */
-   gap: 20px; /* Kartlar arasında boşluk bırak */
+   display: flex; 
+   flex-wrap: wrap; 
+   gap: 20px; 
  
    .card {
-     flex: 1 1 calc(33.333% - 20px); /* Masaüstünde 3 sütun olacak şekilde genişlik ayarla */
-     max-width: calc(33.333% - 20px); /* Aynı genişlik */
-     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
-     overflow: hidden; /* Taşmaları engelle */
-     transition: transform 0.5s ease; /* Hover animasyonu */
+     flex: 1 1 calc(33.333% - 20px); 
+     max-width: calc(33.333% - 20px); 
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+     overflow: hidden; 
+     transition: transform 0.5s ease; 
  
      &:hover {
-       transform: scale(1.03); /* Hover ile büyütme efekti */
+       transform: scale(1.03); 
      }
  
      img {
-       width: 100%; /* Görsel genişliğini kartla eşit yap */
-       height: 300px; /* Sabit bir yükseklik belirle */
-       object-fit: cover; /* Görselleri kapsayıcıya sığdır ve taşan yerleri kes */
+       width: 100%; 
+       height: 300px;
+       object-fit: cover; 
      }
    }
  
    /* Mobil cihazlar için: */
    @media (max-width: 768px) {
      .card {
-       flex: 1 1 100%; /* Mobilde kart genişliği %100 olur, alt alta dizilir */
-       max-width: 100%; /* Aynı genişlikte tut */
+       flex: 1 1 100%; 
+       max-width: 100%; 
      }
    }
  }
@@ -142,3 +165,28 @@ a {
    display: flex;
    justify-content: flex-end;
 }
+
+.custom-offcanvas {
+      width: 200px;
+      height: 100vh; 
+      background-color: #2168BA; 
+      color: white; 
+      .nav-link {
+         color: #fff; 
+         font-size: 1.2rem; 
+         font-weight: bold; 
+         padding: 10px 15px; 
+         border-radius: 20px; 
+         transition: background-color 0.3s ease; 
+      }
+}
+@media (max-width: 768px) {
+   .custom-offcanvas {
+     width: 100%; 
+   }
+ 
+   .custom-offcanvas .nav-link {
+     text-align: left;
+   }
+ }
+

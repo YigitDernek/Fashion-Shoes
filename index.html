@@ -10,41 +10,42 @@
     <body>
         <header>  
           <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary custom-nav">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top custom-nav">
             <div class="container-fluid">
              <a class="navbar-brand" href="#">
               <img src="../Fashion-Shoes/images/Fashion Shoes Logo Transparent.png" alt="Fashion-Shoes">
              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <div class="offcanvas offcanvas-end custom-offcanvas" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                   <li class="nav-item">
                     <a class="nav-link active custom-home me-2 text-light" aria-current="page" href="#">HOME</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link custom-lnk me-2 text-light" href="#">LINK</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle custom-drpd me-2 text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      DROPDOWN
-                    </a>
+                  <li class="nav-item dropdown custom-drpdwn">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTS</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      <li><a class="dropdown-item" href="#">Men's Shoes</a></li>
+                      <li><a class="dropdown-item" href="#">Women's Shoes</a></li>
+                      <li><a class="dropdown-item" href="#">Kids' Shoes</a></li>
                     </ul>
-                  </li>
+                  </li>                            
                   <li class="nav-item">
-                    <a class="nav-link disabled custom-dsbl text-light" aria-disabled="true">Disabled</a>
+                    <a class="nav-link custom-lnk me-2 text-light" href="#">BENEFITS</a>
                   </li>
+                  <li>
+                    <a class="nav-link custom-lnk me-2 text-light" href="#">SIGN-IN</a>
+                  </li>
+                  <li>
+                    <a class="nav-link custom-lnk me-2 text-light" href="#">CONTACT US</a>
+                  </li>
+                  
+                  <form class="d-flex mt-3 ms-auto custom-form" role="search">
+                    <input class="form-control me-2 custom-inp" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light custom-btn" type="submit">Search</button>
+                  </form>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2 custom-inp" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-light custom-btn" type="submit">Search</button>
-                </form>
               </div>
             </div>
           </nav>
@@ -64,7 +65,7 @@
           <div class="card">
             <img src="../Fashion-Shoes/images/Shoes2.jpg" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
-              <h5 class="card-title">Waterproof</h5>
+              <h5 class="card-title">BOOTS</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
               <a class="btn btn-primary" href="#" role="button">BUY NOW</a>
@@ -105,8 +106,8 @@
             </div>
           </div>
         </section>
-      <footer>
-        <p class="info">All rights reserved 2025</p>
+      <footer style="display: flex; justify-content: end; margin-right: 10px;">
+        <p>© 2025 Fashion Shoes. All rights reserved. | Designed by Yiğitcan Dernek</p>
       </footer>
     </body>
 </html>
